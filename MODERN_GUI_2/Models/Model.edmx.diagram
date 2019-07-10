@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bd3188d439404327a807672f5bec5780" Name="Diagram1">
+        <EntityTypeShape EntityType="BDAPOLOFEModel.APCERTIFICADO" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAPOLOFEModel.APCODIGOERROR" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAPOLOFEModel.APCORREO" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAPOLOFEModel.APEMPRESA" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAPOLOFEModel.APESTADO" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAPOLOFEModel.APFACTURACAB" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAPOLOFEModel.APFORMAPAGO" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAPOLOFEModel.APMODELORIDE" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAPOLOFEModel.APOPERADOR" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAPOLOFEModel.APREGION" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAPOLOFEModel.APRUTAARCHIVO" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAPOLOFEModel.APSCRIPT" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAPOLOFEModel.APSUCURSAL" Width="1.5" PointX="3" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAPOLOFEModel.APTIPODOC" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="BDAPOLOFEModel.FK__APCERTIFI__EMPRE__1EA48E88" ManuallyRouted="false" />
+        <AssociationConnector Association="BDAPOLOFEModel.FK__APCORREO__EMPRES__18EBB532" ManuallyRouted="false" />
+        <AssociationConnector Association="BDAPOLOFEModel.FK__APOPERADO__EMPRE__160F4887" ManuallyRouted="false" />
+        <AssociationConnector Association="BDAPOLOFEModel.FK__APRUTAARC__EMPRE__4C6B5938" ManuallyRouted="false" />
+        <AssociationConnector Association="BDAPOLOFEModel.FK__APSUCURSA__EMPRE__1BC821DD" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
