@@ -163,11 +163,11 @@
             // txtClaveFtp
             // 
             this.txtClaveFtp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtClaveFtp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClaveFtp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClaveFtp.Location = new System.Drawing.Point(563, 326);
             this.txtClaveFtp.Name = "txtClaveFtp";
             this.txtClaveFtp.PasswordChar = '*';
-            this.txtClaveFtp.Size = new System.Drawing.Size(115, 23);
+            this.txtClaveFtp.Size = new System.Drawing.Size(115, 20);
             this.txtClaveFtp.TabIndex = 62;
             // 
             // label16
@@ -184,10 +184,10 @@
             // txtUsuarioFtp
             // 
             this.txtUsuarioFtp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtUsuarioFtp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuarioFtp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuarioFtp.Location = new System.Drawing.Point(563, 297);
             this.txtUsuarioFtp.Name = "txtUsuarioFtp";
-            this.txtUsuarioFtp.Size = new System.Drawing.Size(115, 23);
+            this.txtUsuarioFtp.Size = new System.Drawing.Size(188, 20);
             this.txtUsuarioFtp.TabIndex = 60;
             // 
             // label14
@@ -204,10 +204,10 @@
             // txtUrl
             // 
             this.txtUrl.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtUrl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUrl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUrl.Location = new System.Drawing.Point(541, 268);
             this.txtUrl.Name = "txtUrl";
-            this.txtUrl.Size = new System.Drawing.Size(263, 23);
+            this.txtUrl.Size = new System.Drawing.Size(263, 20);
             this.txtUrl.TabIndex = 58;
             // 
             // label15
@@ -251,7 +251,7 @@
             // txtObservacion
             // 
             this.txtObservacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtObservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObservacion.Location = new System.Drawing.Point(92, 106);
             this.txtObservacion.Multiline = true;
             this.txtObservacion.Name = "txtObservacion";
@@ -272,10 +272,10 @@
             // txtTelefono
             // 
             this.txtTelefono.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(82, 77);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(115, 23);
+            this.txtTelefono.Size = new System.Drawing.Size(115, 20);
             this.txtTelefono.TabIndex = 49;
             // 
             // label12
@@ -292,10 +292,10 @@
             // txtCedula
             // 
             this.txtCedula.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCedula.Location = new System.Drawing.Point(82, 48);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(115, 23);
+            this.txtCedula.Size = new System.Drawing.Size(115, 20);
             this.txtCedula.TabIndex = 47;
             // 
             // label11
@@ -323,10 +323,10 @@
             // txtGerente
             // 
             this.txtGerente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtGerente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGerente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGerente.Location = new System.Drawing.Point(82, 19);
             this.txtGerente.Name = "txtGerente";
-            this.txtGerente.Size = new System.Drawing.Size(268, 23);
+            this.txtGerente.Size = new System.Drawing.Size(268, 20);
             this.txtGerente.TabIndex = 44;
             // 
             // label9
@@ -344,6 +344,7 @@
             // 
             this.cmdAmbiente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmdAmbiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmdAmbiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdAmbiente.FormattingEnabled = true;
             this.cmdAmbiente.Items.AddRange(new object[] {
             "REGISTRO DE LA PROPIEDAD Y MERCANTIL DEL CANTON LA TRONCAL"});
@@ -367,6 +368,7 @@
             // 
             this.cmbTipoEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbTipoEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipoEmpresa.FormattingEnabled = true;
             this.cmbTipoEmpresa.Items.AddRange(new object[] {
             "REGISTRO DE LA PROPIEDAD Y MERCANTIL DEL CANTON LA TRONCAL"});
@@ -383,6 +385,7 @@
             this.btnRutaLogo.Size = new System.Drawing.Size(50, 47);
             this.btnRutaLogo.TabIndex = 49;
             this.btnRutaLogo.UseVisualStyleBackColor = true;
+            this.btnRutaLogo.Click += new System.EventHandler(this.btnRutaLogo_Click);
             // 
             // label7
             // 
@@ -398,11 +401,11 @@
             // txtRutaLogo
             // 
             this.txtRutaLogo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtRutaLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRutaLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRutaLogo.Location = new System.Drawing.Point(89, 134);
             this.txtRutaLogo.Name = "txtRutaLogo";
             this.txtRutaLogo.ReadOnly = true;
-            this.txtRutaLogo.Size = new System.Drawing.Size(344, 23);
+            this.txtRutaLogo.Size = new System.Drawing.Size(344, 20);
             this.txtRutaLogo.TabIndex = 47;
             // 
             // chkContribuyente
@@ -419,10 +422,10 @@
             // txtResolucion
             // 
             this.txtResolucion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtResolucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtResolucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtResolucion.Location = new System.Drawing.Point(608, 15);
             this.txtResolucion.Name = "txtResolucion";
-            this.txtResolucion.Size = new System.Drawing.Size(77, 23);
+            this.txtResolucion.Size = new System.Drawing.Size(77, 20);
             this.txtResolucion.TabIndex = 45;
             // 
             // label6
@@ -450,10 +453,10 @@
             // txtCorreo
             // 
             this.txtCorreo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(89, 105);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(268, 23);
+            this.txtCorreo.Size = new System.Drawing.Size(268, 20);
             this.txtCorreo.TabIndex = 42;
             // 
             // label4
@@ -470,10 +473,10 @@
             // txtTelefonos
             // 
             this.txtTelefonos.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTelefonos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefonos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonos.Location = new System.Drawing.Point(302, 76);
             this.txtTelefonos.Name = "txtTelefonos";
-            this.txtTelefonos.Size = new System.Drawing.Size(115, 23);
+            this.txtTelefonos.Size = new System.Drawing.Size(115, 20);
             this.txtTelefonos.TabIndex = 40;
             // 
             // label3
@@ -490,10 +493,10 @@
             // txtRuc
             // 
             this.txtRuc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtRuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRuc.Location = new System.Drawing.Point(89, 76);
             this.txtRuc.Name = "txtRuc";
-            this.txtRuc.Size = new System.Drawing.Size(115, 23);
+            this.txtRuc.Size = new System.Drawing.Size(115, 20);
             this.txtRuc.TabIndex = 38;
             // 
             // label2
@@ -510,10 +513,10 @@
             // txtDireccion
             // 
             this.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(89, 47);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(562, 23);
+            this.txtDireccion.Size = new System.Drawing.Size(562, 20);
             this.txtDireccion.TabIndex = 36;
             // 
             // label1
@@ -530,10 +533,10 @@
             // txtEmpresa
             // 
             this.txtEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmpresa.Location = new System.Drawing.Point(89, 18);
             this.txtEmpresa.Name = "txtEmpresa";
-            this.txtEmpresa.Size = new System.Drawing.Size(268, 23);
+            this.txtEmpresa.Size = new System.Drawing.Size(268, 20);
             this.txtEmpresa.TabIndex = 34;
             // 
             // tabPage2
@@ -899,6 +902,7 @@
             this.btnRutaArchivo.Size = new System.Drawing.Size(50, 47);
             this.btnRutaArchivo.TabIndex = 52;
             this.btnRutaArchivo.UseVisualStyleBackColor = true;
+            this.btnRutaArchivo.Click += new System.EventHandler(this.btnRutaArchivo_Click);
             // 
             // btnOut
             // 
@@ -992,6 +996,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.tabControl1);
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
