@@ -24,6 +24,10 @@ namespace MODERN_GUI_2.Models
             this.APOPERADOR = new HashSet<APOPERADOR>();
             this.APRUTAARCHIVO = new HashSet<APRUTAARCHIVO>();
             this.APSUCURSAL = new HashSet<APSUCURSAL>();
+            this.APFACTURACAB = new HashSet<APFACTURACAB>();
+            this.APGUIACAB = new HashSet<APGUIACAB>();
+            this.APNCRCAB = new HashSet<APNCRCAB>();
+            this.APRETENCION = new HashSet<APRETENCION>();
         }
     
         public int EMPRESA { get; set; }
@@ -89,5 +93,13 @@ namespace MODERN_GUI_2.Models
         public virtual ICollection<APRUTAARCHIVO> APRUTAARCHIVO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<APSUCURSAL> APSUCURSAL { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<APFACTURACAB> APFACTURACAB { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<APGUIACAB> APGUIACAB { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<APNCRCAB> APNCRCAB { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<APRETENCION> APRETENCION { get; set; }
     }
 }

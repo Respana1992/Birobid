@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BDAPOLOFEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BDAPOLOFEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="APACCESO">
           <Key>
             <PropertyRef Name="ID" />
@@ -218,6 +218,118 @@
           <Property Name="FORMA" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ESTADO" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
+        <EntityType Name="APGUIACAB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EMPRESA" Type="int" Nullable="false" />
+          <Property Name="SUCURSAL" Type="int" Nullable="false" />
+          <Property Name="SERIE" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="NUMERO" Type="bigint" Nullable="false" />
+          <Property Name="NUMGUIA" Type="bigint" Nullable="false" />
+          <Property Name="FECHAEMI" Type="date" Nullable="false" />
+          <Property Name="RUCCHOFER" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="ANIOCAMION" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="NUMAUTORIZACIONDOC" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CAMION" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MOTIVO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="PLACA" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="NOMBRECHOFER" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="NOMBRECLIENTE" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="RUCCLI" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="DIRECCION" Type="varchar" MaxLength="200" />
+          <Property Name="TELEFONOS" Type="varchar" MaxLength="50" />
+          <Property Name="CORREO" Type="varchar" MaxLength="200" />
+          <Property Name="CLAVEACCESO" Type="varchar" MaxLength="200" />
+          <Property Name="NOAUTORIZACION" Type="varchar" MaxLength="50" />
+          <Property Name="ARCHIVOSOLO" Type="nvarchar(max)" />
+          <Property Name="ARCHIVOFIRMA" Type="nvarchar(max)" />
+          <Property Name="ARCHIVOAUTORIZACION" Type="nvarchar(max)" />
+          <Property Name="ARCHIVOPDF" Type="nvarchar(max)" />
+          <Property Name="ARCHIVOERROR" Type="nvarchar(max)" />
+          <Property Name="CONCEPTOERROR" Type="varchar(max)" />
+          <Property Name="CODIGOERROR" Type="char" MaxLength="3" />
+          <Property Name="FECHAREGISTRO" Type="date" />
+          <Property Name="HORAREGISTRO" Type="char" MaxLength="10" />
+          <Property Name="FECHAPROCESO" Type="date" />
+          <Property Name="HORAPROCESO" Type="char" MaxLength="10" />
+          <Property Name="ESTADOPROCESO" Type="char" MaxLength="10" />
+          <Property Name="TIPO" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="SUBIDOALAWEB" Type="nchar" MaxLength="2" />
+          <Property Name="ACTUALIZADOSC" Type="char" MaxLength="1" />
+          <Property Name="FECHADESDE" Type="date" />
+          <Property Name="FECHAHASTA" Type="date" />
+          <Property Name="NOCERTIFICADO" Type="varchar" MaxLength="50" />
+          <Property Name="NOMCIUDAD" Type="varchar" MaxLength="50" />
+          <Property Name="DETALLE" Type="varchar(max)" />
+          <Property Name="BENEFICIARIO" Type="varchar" MaxLength="200" />
+          <Property Name="VALORENLETRAS" Type="varchar(max)" />
+          <Property Name="CODCLIENTE" Type="varchar" MaxLength="20" />
+          <Property Name="NombreDocumento" Type="varchar" MaxLength="50" />
+          <Property Name="estadoFecEmi" Type="int" />
+          <Property Name="TIPOIDENTIFICACION" Type="char" MaxLength="1" />
+          <Property Name="DESPACHO" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ENVIACORREO" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ERRORCORREO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="clavebyte" Type="image" />
+          <Property Name="REGION" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="ANULADO" Type="char" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <EntityType Name="APNCRCAB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EMPRESA" Type="int" Nullable="false" />
+          <Property Name="SUCURSAL" Type="int" Nullable="false" />
+          <Property Name="SERIE" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="NUMERO" Type="bigint" Nullable="false" />
+          <Property Name="SUBTOTALNCR" Type="float" Nullable="false" />
+          <Property Name="DESCUENTONCR" Type="float" Nullable="false" />
+          <Property Name="IVAFAC" Type="float" Nullable="false" />
+          <Property Name="NETOFAC" Type="float" Nullable="false" />
+          <Property Name="FECHAEMI" Type="date" Nullable="false" />
+          <Property Name="FECHADOC" Type="date" Nullable="false" />
+          <Property Name="RUC" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="DIRECCION" Type="varchar" MaxLength="200" />
+          <Property Name="TELEFONOS" Type="varchar" MaxLength="50" />
+          <Property Name="CORREO" Type="varchar" MaxLength="200" />
+          <Property Name="SERIEFAC" Type="char" MaxLength="10" />
+          <Property Name="NUMEROFAC" Type="varchar" MaxLength="20" />
+          <Property Name="CLAVEACCESO" Type="varchar" MaxLength="200" />
+          <Property Name="OBSERVACION" Type="varchar" MaxLength="200" />
+          <Property Name="NOAUTORIZACION" Type="varchar" MaxLength="50" />
+          <Property Name="ARCHIVOSOLO" Type="nvarchar(max)" />
+          <Property Name="ARCHIVOFIRMA" Type="nvarchar(max)" />
+          <Property Name="ARCHIVOAUTORIZACION" Type="nvarchar(max)" />
+          <Property Name="ARCHIVOPDF" Type="nvarchar(max)" />
+          <Property Name="ARCHIVOERROR" Type="nvarchar(max)" />
+          <Property Name="CONCEPTOERROR" Type="varchar(max)" />
+          <Property Name="CODIGOERROR" Type="char" MaxLength="3" />
+          <Property Name="FECHAREGISTRO" Type="date" />
+          <Property Name="HORAREGISTRO" Type="char" MaxLength="10" />
+          <Property Name="FECHAPROCESO" Type="date" />
+          <Property Name="HORAPROCESO" Type="char" MaxLength="10" />
+          <Property Name="ESTADOPROCESO" Type="char" MaxLength="10" />
+          <Property Name="TIPO" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="SUBIDOALAWEB" Type="nchar" MaxLength="2" />
+          <Property Name="ACTUALIZADOSC" Type="nchar" MaxLength="1" />
+          <Property Name="CODCLIENTE" Type="varchar" MaxLength="20" />
+          <Property Name="NombreDocumento" Type="varchar" MaxLength="50" />
+          <Property Name="CLAVE" Type="nchar" MaxLength="20" />
+          <Property Name="PAGINAWEB" Type="varchar" MaxLength="100" />
+          <Property Name="estadoFecEmi" Type="int" Nullable="false" />
+          <Property Name="TIPOIDENTIFICACION" Type="char" MaxLength="1" />
+          <Property Name="VENDEDOR" Type="varchar" MaxLength="200" />
+          <Property Name="ENVIACORREO" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ERRORCORREO" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="clavebyte" Type="image" />
+          <Property Name="REGION" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="SUBTOTALCERO" Type="float" />
+          <Property Name="ANULADO" Type="char" MaxLength="1" Nullable="false" />
+        </EntityType>
         <EntityType Name="APOPERADOR">
           <Key>
             <PropertyRef Name="ID" />
@@ -237,6 +349,50 @@
           </Key>
           <Property Name="CODIGO" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="APRETENCION">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EMPRESA" Type="int" Nullable="false" />
+          <Property Name="SUCURSAL" Type="int" Nullable="false" />
+          <Property Name="RUCRET" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="NOMBRERET" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="DIRECCIONRET" Type="varchar" MaxLength="200" />
+          <Property Name="TELEFONRET" Type="varchar" MaxLength="50" />
+          <Property Name="CORREORET" Type="varchar" MaxLength="200" />
+          <Property Name="SERIERET" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="NUMERORET" Type="bigint" Nullable="false" />
+          <Property Name="NOAUTORIZACION" Type="varchar" MaxLength="50" />
+          <Property Name="FECHARET" Type="date" />
+          <Property Name="CLAVEACCESO" Type="varchar" MaxLength="100" />
+          <Property Name="ARCHIVOSOLO" Type="varchar" MaxLength="200" />
+          <Property Name="ARCHIVOFIRMA" Type="varchar" MaxLength="200" />
+          <Property Name="CONCEPTOERROR" Type="varchar" MaxLength="200" />
+          <Property Name="ARCHIVOERROR" Type="varchar" MaxLength="200" />
+          <Property Name="CODIGOERROR" Type="char" MaxLength="3" />
+          <Property Name="ARCHIVOAUTORIZACION" Type="varchar" MaxLength="200" />
+          <Property Name="ARCHIVOPDF" Type="nvarchar(max)" />
+          <Property Name="FECHAREGISTRO" Type="date" />
+          <Property Name="HORAREGISTRO" Type="char" MaxLength="10" />
+          <Property Name="FECHAPROCESO" Type="date" />
+          <Property Name="HORAPROCESO" Type="char" MaxLength="10" />
+          <Property Name="ESTADOPROCESO" Type="char" MaxLength="10" />
+          <Property Name="SUBIDOALAWEB" Type="nchar" MaxLength="2" />
+          <Property Name="ACTUALIZADOSC" Type="char" MaxLength="1" />
+          <Property Name="CODCLIENTE" Type="varchar" MaxLength="20" />
+          <Property Name="NombreDocumento" Type="varchar" MaxLength="50" />
+          <Property Name="estadoFecEmi" Type="int" />
+          <Property Name="TIPOIDENTIFICACION" Type="char" MaxLength="1" />
+          <Property Name="CLAVE" Type="varchar" MaxLength="20" />
+          <Property Name="ENVIACORREO" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ERRORCORREO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="clavebyte" Type="image" />
+          <Property Name="REGION" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="ANULADO" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="SUBIRWEB" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="TIPO" Type="char" MaxLength="3" Nullable="false" />
         </EntityType>
         <EntityType Name="APRUTAARCHIVO">
           <Key>
@@ -344,6 +500,42 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__APFACTURA__EMPRE__3BFFE745">
+          <End Role="APEMPRESA" Type="Self.APEMPRESA" Multiplicity="1" />
+          <End Role="APFACTURACAB" Type="Self.APFACTURACAB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="APEMPRESA">
+              <PropertyRef Name="EMPRESA" />
+            </Principal>
+            <Dependent Role="APFACTURACAB">
+              <PropertyRef Name="EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__APGUIACAB__EMPRE__73501C2F">
+          <End Role="APEMPRESA" Type="Self.APEMPRESA" Multiplicity="1" />
+          <End Role="APGUIACAB" Type="Self.APGUIACAB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="APEMPRESA">
+              <PropertyRef Name="EMPRESA" />
+            </Principal>
+            <Dependent Role="APGUIACAB">
+              <PropertyRef Name="EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__APNCRCAB__EMPRES__3DE82FB7">
+          <End Role="APEMPRESA" Type="Self.APEMPRESA" Multiplicity="1" />
+          <End Role="APNCRCAB" Type="Self.APNCRCAB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="APEMPRESA">
+              <PropertyRef Name="EMPRESA" />
+            </Principal>
+            <Dependent Role="APNCRCAB">
+              <PropertyRef Name="EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__APOPERADO__EMPRE__160F4887">
           <End Role="APEMPRESA" Type="Self.APEMPRESA" Multiplicity="1" />
           <End Role="APOPERADOR" Type="Self.APOPERADOR" Multiplicity="*" />
@@ -352,6 +544,18 @@
               <PropertyRef Name="EMPRESA" />
             </Principal>
             <Dependent Role="APOPERADOR">
+              <PropertyRef Name="EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__APRETENCI__EMPRE__3FD07829">
+          <End Role="APEMPRESA" Type="Self.APEMPRESA" Multiplicity="1" />
+          <End Role="APRETENCION" Type="Self.APRETENCION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="APEMPRESA">
+              <PropertyRef Name="EMPRESA" />
+            </Principal>
+            <Dependent Role="APRETENCION">
               <PropertyRef Name="EMPRESA" />
             </Dependent>
           </ReferentialConstraint>
@@ -390,8 +594,11 @@
           <EntitySet Name="APESTADO" EntityType="Self.APESTADO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="APFACTURACAB" EntityType="Self.APFACTURACAB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="APFORMAPAGO" EntityType="Self.APFORMAPAGO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="APGUIACAB" EntityType="Self.APGUIACAB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="APNCRCAB" EntityType="Self.APNCRCAB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="APOPERADOR" EntityType="Self.APOPERADOR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="APREGION" EntityType="Self.APREGION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="APRETENCION" EntityType="Self.APRETENCION" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="APRUTAARCHIVO" EntityType="Self.APRUTAARCHIVO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="APSCRIPT" EntityType="Self.APSCRIPT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="APSUCURSAL" EntityType="Self.APSUCURSAL" Schema="dbo" store:Type="Tables" />
@@ -412,9 +619,25 @@
             <End Role="APEMPRESA" EntitySet="APEMPRESA" />
             <End Role="APCORREOSOPORTE" EntitySet="APCORREOSOPORTE" />
           </AssociationSet>
+          <AssociationSet Name="FK__APFACTURA__EMPRE__3BFFE745" Association="Self.FK__APFACTURA__EMPRE__3BFFE745">
+            <End Role="APEMPRESA" EntitySet="APEMPRESA" />
+            <End Role="APFACTURACAB" EntitySet="APFACTURACAB" />
+          </AssociationSet>
+          <AssociationSet Name="FK__APGUIACAB__EMPRE__73501C2F" Association="Self.FK__APGUIACAB__EMPRE__73501C2F">
+            <End Role="APEMPRESA" EntitySet="APEMPRESA" />
+            <End Role="APGUIACAB" EntitySet="APGUIACAB" />
+          </AssociationSet>
+          <AssociationSet Name="FK__APNCRCAB__EMPRES__3DE82FB7" Association="Self.FK__APNCRCAB__EMPRES__3DE82FB7">
+            <End Role="APEMPRESA" EntitySet="APEMPRESA" />
+            <End Role="APNCRCAB" EntitySet="APNCRCAB" />
+          </AssociationSet>
           <AssociationSet Name="FK__APOPERADO__EMPRE__160F4887" Association="Self.FK__APOPERADO__EMPRE__160F4887">
             <End Role="APEMPRESA" EntitySet="APEMPRESA" />
             <End Role="APOPERADOR" EntitySet="APOPERADOR" />
+          </AssociationSet>
+          <AssociationSet Name="FK__APRETENCI__EMPRE__3FD07829" Association="Self.FK__APRETENCI__EMPRE__3FD07829">
+            <End Role="APEMPRESA" EntitySet="APEMPRESA" />
+            <End Role="APRETENCION" EntitySet="APRETENCION" />
           </AssociationSet>
           <AssociationSet Name="FK__APRUTAARC__EMPRE__4C6B5938" Association="Self.FK__APRUTAARC__EMPRE__4C6B5938">
             <End Role="APEMPRESA" EntitySet="APEMPRESA" />
@@ -425,8 +648,7 @@
             <End Role="APSUCURSAL" EntitySet="APSUCURSAL" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BDAPOLOFEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -547,6 +769,10 @@
           <NavigationProperty Name="APOPERADOR" Relationship="Self.FK__APOPERADO__EMPRE__160F4887" FromRole="APEMPRESA" ToRole="APOPERADOR" />
           <NavigationProperty Name="APRUTAARCHIVO" Relationship="Self.FK__APRUTAARC__EMPRE__4C6B5938" FromRole="APEMPRESA" ToRole="APRUTAARCHIVO" />
           <NavigationProperty Name="APSUCURSAL" Relationship="Self.FK__APSUCURSA__EMPRE__1BC821DD" FromRole="APEMPRESA" ToRole="APSUCURSAL" />
+          <NavigationProperty Name="APFACTURACAB" Relationship="BDAPOLOFEModel.FK__APFACTURA__EMPRE__3BFFE745" FromRole="APEMPRESA" ToRole="APFACTURACAB" />
+          <NavigationProperty Name="APGUIACAB" Relationship="BDAPOLOFEModel.FK__APGUIACAB__EMPRE__73501C2F" FromRole="APEMPRESA" ToRole="APGUIACAB" />
+          <NavigationProperty Name="APNCRCAB" Relationship="BDAPOLOFEModel.FK__APNCRCAB__EMPRES__3DE82FB7" FromRole="APEMPRESA" ToRole="APNCRCAB" />
+          <NavigationProperty Name="APRETENCION" Relationship="BDAPOLOFEModel.FK__APRETENCI__EMPRE__3FD07829" FromRole="APEMPRESA" ToRole="APRETENCION" />
         </EntityType>
         <EntityType Name="APESTADO">
           <Key>
@@ -645,6 +871,7 @@
           <Property Name="ANULADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="SUBIRWEB" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="MANEJACLAVE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="APEMPRESA" Relationship="BDAPOLOFEModel.FK__APFACTURA__EMPRE__3BFFE745" FromRole="APFACTURACAB" ToRole="APEMPRESA" />
         </EntityType>
         <EntityType Name="APFORMAPAGO">
           <Key>
@@ -863,7 +1090,233 @@
             <End Role="APEMPRESA" EntitySet="APEMPRESA" />
             <End Role="APSUCURSAL" EntitySet="APSUCURSAL" />
           </AssociationSet>
+          <EntitySet Name="APGUIACAB" EntityType="BDAPOLOFEModel.APGUIACAB" />
+          <EntitySet Name="APNCRCAB" EntityType="BDAPOLOFEModel.APNCRCAB" />
+          <EntitySet Name="APRETENCION" EntityType="BDAPOLOFEModel.APRETENCION" />
+          <AssociationSet Name="FK__APFACTURA__EMPRE__3BFFE745" Association="BDAPOLOFEModel.FK__APFACTURA__EMPRE__3BFFE745">
+            <End Role="APEMPRESA" EntitySet="APEMPRESA" />
+            <End Role="APFACTURACAB" EntitySet="APFACTURACAB" />
+          </AssociationSet>
+          <AssociationSet Name="FK__APGUIACAB__EMPRE__73501C2F" Association="BDAPOLOFEModel.FK__APGUIACAB__EMPRE__73501C2F">
+            <End Role="APEMPRESA" EntitySet="APEMPRESA" />
+            <End Role="APGUIACAB" EntitySet="APGUIACAB" />
+          </AssociationSet>
+          <AssociationSet Name="FK__APNCRCAB__EMPRES__3DE82FB7" Association="BDAPOLOFEModel.FK__APNCRCAB__EMPRES__3DE82FB7">
+            <End Role="APEMPRESA" EntitySet="APEMPRESA" />
+            <End Role="APNCRCAB" EntitySet="APNCRCAB" />
+          </AssociationSet>
+          <AssociationSet Name="FK__APRETENCI__EMPRE__3FD07829" Association="BDAPOLOFEModel.FK__APRETENCI__EMPRE__3FD07829">
+            <End Role="APEMPRESA" EntitySet="APEMPRESA" />
+            <End Role="APRETENCION" EntitySet="APRETENCION" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="APGUIACAB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EMPRESA" Type="Int32" Nullable="false" />
+          <Property Name="SUCURSAL" Type="Int32" Nullable="false" />
+          <Property Name="SERIE" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="NUMERO" Type="Int64" Nullable="false" />
+          <Property Name="NUMGUIA" Type="Int64" Nullable="false" />
+          <Property Name="FECHAEMI" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="RUCCHOFER" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ANIOCAMION" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="NUMAUTORIZACIONDOC" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CAMION" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MOTIVO" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PLACA" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="NOMBRECHOFER" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRECLIENTE" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="RUCCLI" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DIRECCION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFONOS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CORREO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CLAVEACCESO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="NOAUTORIZACION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ARCHIVOSOLO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ARCHIVOFIRMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ARCHIVOAUTORIZACION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ARCHIVOPDF" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ARCHIVOERROR" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CONCEPTOERROR" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CODIGOERROR" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="FECHAREGISTRO" Type="DateTime" Precision="0" />
+          <Property Name="HORAREGISTRO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="FECHAPROCESO" Type="DateTime" Precision="0" />
+          <Property Name="HORAPROCESO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ESTADOPROCESO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="TIPO" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="SUBIDOALAWEB" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="ACTUALIZADOSC" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="FECHADESDE" Type="DateTime" Precision="0" />
+          <Property Name="FECHAHASTA" Type="DateTime" Precision="0" />
+          <Property Name="NOCERTIFICADO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NOMCIUDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DETALLE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="BENEFICIARIO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="VALORENLETRAS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CODCLIENTE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NombreDocumento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="estadoFecEmi" Type="Int32" />
+          <Property Name="TIPOIDENTIFICACION" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="DESPACHO" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ENVIACORREO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ERRORCORREO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clavebyte" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="REGION" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ANULADO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="APEMPRESA" Relationship="BDAPOLOFEModel.FK__APGUIACAB__EMPRE__73501C2F" FromRole="APGUIACAB" ToRole="APEMPRESA" />
+        </EntityType>
+        <EntityType Name="APNCRCAB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EMPRESA" Type="Int32" Nullable="false" />
+          <Property Name="SUCURSAL" Type="Int32" Nullable="false" />
+          <Property Name="SERIE" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="NUMERO" Type="Int64" Nullable="false" />
+          <Property Name="SUBTOTALNCR" Type="Double" Nullable="false" />
+          <Property Name="DESCUENTONCR" Type="Double" Nullable="false" />
+          <Property Name="IVAFAC" Type="Double" Nullable="false" />
+          <Property Name="NETOFAC" Type="Double" Nullable="false" />
+          <Property Name="FECHAEMI" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="FECHADOC" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="RUC" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="DIRECCION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFONOS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CORREO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SERIEFAC" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="NUMEROFAC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CLAVEACCESO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="OBSERVACION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="NOAUTORIZACION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ARCHIVOSOLO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ARCHIVOFIRMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ARCHIVOAUTORIZACION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ARCHIVOPDF" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ARCHIVOERROR" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CONCEPTOERROR" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CODIGOERROR" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="FECHAREGISTRO" Type="DateTime" Precision="0" />
+          <Property Name="HORAREGISTRO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="FECHAPROCESO" Type="DateTime" Precision="0" />
+          <Property Name="HORAPROCESO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ESTADOPROCESO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="TIPO" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="SUBIDOALAWEB" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="ACTUALIZADOSC" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="CODCLIENTE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NombreDocumento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLAVE" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="PAGINAWEB" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="estadoFecEmi" Type="Int32" Nullable="false" />
+          <Property Name="TIPOIDENTIFICACION" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="VENDEDOR" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ENVIACORREO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ERRORCORREO" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="clavebyte" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="REGION" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="SUBTOTALCERO" Type="Double" />
+          <Property Name="ANULADO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="APEMPRESA" Relationship="BDAPOLOFEModel.FK__APNCRCAB__EMPRES__3DE82FB7" FromRole="APNCRCAB" ToRole="APEMPRESA" />
+        </EntityType>
+        <EntityType Name="APRETENCION">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EMPRESA" Type="Int32" Nullable="false" />
+          <Property Name="SUCURSAL" Type="Int32" Nullable="false" />
+          <Property Name="RUCRET" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRERET" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="DIRECCIONRET" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFONRET" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CORREORET" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SERIERET" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="NUMERORET" Type="Int64" Nullable="false" />
+          <Property Name="NOAUTORIZACION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FECHARET" Type="DateTime" Precision="0" />
+          <Property Name="CLAVEACCESO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ARCHIVOSOLO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ARCHIVOFIRMA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CONCEPTOERROR" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ARCHIVOERROR" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CODIGOERROR" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="ARCHIVOAUTORIZACION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ARCHIVOPDF" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FECHAREGISTRO" Type="DateTime" Precision="0" />
+          <Property Name="HORAREGISTRO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="FECHAPROCESO" Type="DateTime" Precision="0" />
+          <Property Name="HORAPROCESO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ESTADOPROCESO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="SUBIDOALAWEB" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="ACTUALIZADOSC" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CODCLIENTE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NombreDocumento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="estadoFecEmi" Type="Int32" />
+          <Property Name="TIPOIDENTIFICACION" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CLAVE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ENVIACORREO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ERRORCORREO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="clavebyte" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="REGION" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ANULADO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SUBIRWEB" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="TIPO" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="APEMPRESA" Relationship="BDAPOLOFEModel.FK__APRETENCI__EMPRE__3FD07829" FromRole="APRETENCION" ToRole="APEMPRESA" />
+        </EntityType>
+        <Association Name="FK__APFACTURA__EMPRE__3BFFE745">
+          <End Type="BDAPOLOFEModel.APEMPRESA" Role="APEMPRESA" Multiplicity="1" />
+          <End Type="BDAPOLOFEModel.APFACTURACAB" Role="APFACTURACAB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="APEMPRESA">
+              <PropertyRef Name="EMPRESA" />
+            </Principal>
+            <Dependent Role="APFACTURACAB">
+              <PropertyRef Name="EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__APGUIACAB__EMPRE__73501C2F">
+          <End Type="BDAPOLOFEModel.APEMPRESA" Role="APEMPRESA" Multiplicity="1" />
+          <End Type="BDAPOLOFEModel.APGUIACAB" Role="APGUIACAB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="APEMPRESA">
+              <PropertyRef Name="EMPRESA" />
+            </Principal>
+            <Dependent Role="APGUIACAB">
+              <PropertyRef Name="EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__APNCRCAB__EMPRES__3DE82FB7">
+          <End Type="BDAPOLOFEModel.APEMPRESA" Role="APEMPRESA" Multiplicity="1" />
+          <End Type="BDAPOLOFEModel.APNCRCAB" Role="APNCRCAB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="APEMPRESA">
+              <PropertyRef Name="EMPRESA" />
+            </Principal>
+            <Dependent Role="APNCRCAB">
+              <PropertyRef Name="EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__APRETENCI__EMPRE__3FD07829">
+          <End Type="BDAPOLOFEModel.APEMPRESA" Role="APEMPRESA" Multiplicity="1" />
+          <End Type="BDAPOLOFEModel.APRETENCION" Role="APRETENCION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="APEMPRESA">
+              <PropertyRef Name="EMPRESA" />
+            </Principal>
+            <Dependent Role="APRETENCION">
+              <PropertyRef Name="EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1173,6 +1626,165 @@
               <MappingFragment StoreEntitySet="APTIPODOC">
                 <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
                 <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="APGUIACAB">
+            <EntityTypeMapping TypeName="BDAPOLOFEModel.APGUIACAB">
+              <MappingFragment StoreEntitySet="APGUIACAB">
+                <ScalarProperty Name="ANULADO" ColumnName="ANULADO" />
+                <ScalarProperty Name="REGION" ColumnName="REGION" />
+                <ScalarProperty Name="clavebyte" ColumnName="clavebyte" />
+                <ScalarProperty Name="ERRORCORREO" ColumnName="ERRORCORREO" />
+                <ScalarProperty Name="ENVIACORREO" ColumnName="ENVIACORREO" />
+                <ScalarProperty Name="DESPACHO" ColumnName="DESPACHO" />
+                <ScalarProperty Name="TIPOIDENTIFICACION" ColumnName="TIPOIDENTIFICACION" />
+                <ScalarProperty Name="estadoFecEmi" ColumnName="estadoFecEmi" />
+                <ScalarProperty Name="NombreDocumento" ColumnName="NombreDocumento" />
+                <ScalarProperty Name="CODCLIENTE" ColumnName="CODCLIENTE" />
+                <ScalarProperty Name="VALORENLETRAS" ColumnName="VALORENLETRAS" />
+                <ScalarProperty Name="BENEFICIARIO" ColumnName="BENEFICIARIO" />
+                <ScalarProperty Name="DETALLE" ColumnName="DETALLE" />
+                <ScalarProperty Name="NOMCIUDAD" ColumnName="NOMCIUDAD" />
+                <ScalarProperty Name="NOCERTIFICADO" ColumnName="NOCERTIFICADO" />
+                <ScalarProperty Name="FECHAHASTA" ColumnName="FECHAHASTA" />
+                <ScalarProperty Name="FECHADESDE" ColumnName="FECHADESDE" />
+                <ScalarProperty Name="ACTUALIZADOSC" ColumnName="ACTUALIZADOSC" />
+                <ScalarProperty Name="SUBIDOALAWEB" ColumnName="SUBIDOALAWEB" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="ESTADOPROCESO" ColumnName="ESTADOPROCESO" />
+                <ScalarProperty Name="HORAPROCESO" ColumnName="HORAPROCESO" />
+                <ScalarProperty Name="FECHAPROCESO" ColumnName="FECHAPROCESO" />
+                <ScalarProperty Name="HORAREGISTRO" ColumnName="HORAREGISTRO" />
+                <ScalarProperty Name="FECHAREGISTRO" ColumnName="FECHAREGISTRO" />
+                <ScalarProperty Name="CODIGOERROR" ColumnName="CODIGOERROR" />
+                <ScalarProperty Name="CONCEPTOERROR" ColumnName="CONCEPTOERROR" />
+                <ScalarProperty Name="ARCHIVOERROR" ColumnName="ARCHIVOERROR" />
+                <ScalarProperty Name="ARCHIVOPDF" ColumnName="ARCHIVOPDF" />
+                <ScalarProperty Name="ARCHIVOAUTORIZACION" ColumnName="ARCHIVOAUTORIZACION" />
+                <ScalarProperty Name="ARCHIVOFIRMA" ColumnName="ARCHIVOFIRMA" />
+                <ScalarProperty Name="ARCHIVOSOLO" ColumnName="ARCHIVOSOLO" />
+                <ScalarProperty Name="NOAUTORIZACION" ColumnName="NOAUTORIZACION" />
+                <ScalarProperty Name="CLAVEACCESO" ColumnName="CLAVEACCESO" />
+                <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+                <ScalarProperty Name="TELEFONOS" ColumnName="TELEFONOS" />
+                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+                <ScalarProperty Name="RUCCLI" ColumnName="RUCCLI" />
+                <ScalarProperty Name="NOMBRECLIENTE" ColumnName="NOMBRECLIENTE" />
+                <ScalarProperty Name="NOMBRECHOFER" ColumnName="NOMBRECHOFER" />
+                <ScalarProperty Name="PLACA" ColumnName="PLACA" />
+                <ScalarProperty Name="MOTIVO" ColumnName="MOTIVO" />
+                <ScalarProperty Name="CAMION" ColumnName="CAMION" />
+                <ScalarProperty Name="NUMAUTORIZACIONDOC" ColumnName="NUMAUTORIZACIONDOC" />
+                <ScalarProperty Name="ANIOCAMION" ColumnName="ANIOCAMION" />
+                <ScalarProperty Name="RUCCHOFER" ColumnName="RUCCHOFER" />
+                <ScalarProperty Name="FECHAEMI" ColumnName="FECHAEMI" />
+                <ScalarProperty Name="NUMGUIA" ColumnName="NUMGUIA" />
+                <ScalarProperty Name="NUMERO" ColumnName="NUMERO" />
+                <ScalarProperty Name="SERIE" ColumnName="SERIE" />
+                <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+                <ScalarProperty Name="EMPRESA" ColumnName="EMPRESA" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="APNCRCAB">
+            <EntityTypeMapping TypeName="BDAPOLOFEModel.APNCRCAB">
+              <MappingFragment StoreEntitySet="APNCRCAB">
+                <ScalarProperty Name="ANULADO" ColumnName="ANULADO" />
+                <ScalarProperty Name="SUBTOTALCERO" ColumnName="SUBTOTALCERO" />
+                <ScalarProperty Name="REGION" ColumnName="REGION" />
+                <ScalarProperty Name="clavebyte" ColumnName="clavebyte" />
+                <ScalarProperty Name="ERRORCORREO" ColumnName="ERRORCORREO" />
+                <ScalarProperty Name="ENVIACORREO" ColumnName="ENVIACORREO" />
+                <ScalarProperty Name="VENDEDOR" ColumnName="VENDEDOR" />
+                <ScalarProperty Name="TIPOIDENTIFICACION" ColumnName="TIPOIDENTIFICACION" />
+                <ScalarProperty Name="estadoFecEmi" ColumnName="estadoFecEmi" />
+                <ScalarProperty Name="PAGINAWEB" ColumnName="PAGINAWEB" />
+                <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+                <ScalarProperty Name="NombreDocumento" ColumnName="NombreDocumento" />
+                <ScalarProperty Name="CODCLIENTE" ColumnName="CODCLIENTE" />
+                <ScalarProperty Name="ACTUALIZADOSC" ColumnName="ACTUALIZADOSC" />
+                <ScalarProperty Name="SUBIDOALAWEB" ColumnName="SUBIDOALAWEB" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="ESTADOPROCESO" ColumnName="ESTADOPROCESO" />
+                <ScalarProperty Name="HORAPROCESO" ColumnName="HORAPROCESO" />
+                <ScalarProperty Name="FECHAPROCESO" ColumnName="FECHAPROCESO" />
+                <ScalarProperty Name="HORAREGISTRO" ColumnName="HORAREGISTRO" />
+                <ScalarProperty Name="FECHAREGISTRO" ColumnName="FECHAREGISTRO" />
+                <ScalarProperty Name="CODIGOERROR" ColumnName="CODIGOERROR" />
+                <ScalarProperty Name="CONCEPTOERROR" ColumnName="CONCEPTOERROR" />
+                <ScalarProperty Name="ARCHIVOERROR" ColumnName="ARCHIVOERROR" />
+                <ScalarProperty Name="ARCHIVOPDF" ColumnName="ARCHIVOPDF" />
+                <ScalarProperty Name="ARCHIVOAUTORIZACION" ColumnName="ARCHIVOAUTORIZACION" />
+                <ScalarProperty Name="ARCHIVOFIRMA" ColumnName="ARCHIVOFIRMA" />
+                <ScalarProperty Name="ARCHIVOSOLO" ColumnName="ARCHIVOSOLO" />
+                <ScalarProperty Name="NOAUTORIZACION" ColumnName="NOAUTORIZACION" />
+                <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
+                <ScalarProperty Name="CLAVEACCESO" ColumnName="CLAVEACCESO" />
+                <ScalarProperty Name="NUMEROFAC" ColumnName="NUMEROFAC" />
+                <ScalarProperty Name="SERIEFAC" ColumnName="SERIEFAC" />
+                <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+                <ScalarProperty Name="TELEFONOS" ColumnName="TELEFONOS" />
+                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="RUC" ColumnName="RUC" />
+                <ScalarProperty Name="FECHADOC" ColumnName="FECHADOC" />
+                <ScalarProperty Name="FECHAEMI" ColumnName="FECHAEMI" />
+                <ScalarProperty Name="NETOFAC" ColumnName="NETOFAC" />
+                <ScalarProperty Name="IVAFAC" ColumnName="IVAFAC" />
+                <ScalarProperty Name="DESCUENTONCR" ColumnName="DESCUENTONCR" />
+                <ScalarProperty Name="SUBTOTALNCR" ColumnName="SUBTOTALNCR" />
+                <ScalarProperty Name="NUMERO" ColumnName="NUMERO" />
+                <ScalarProperty Name="SERIE" ColumnName="SERIE" />
+                <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+                <ScalarProperty Name="EMPRESA" ColumnName="EMPRESA" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="APRETENCION">
+            <EntityTypeMapping TypeName="BDAPOLOFEModel.APRETENCION">
+              <MappingFragment StoreEntitySet="APRETENCION">
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="SUBIRWEB" ColumnName="SUBIRWEB" />
+                <ScalarProperty Name="ANULADO" ColumnName="ANULADO" />
+                <ScalarProperty Name="REGION" ColumnName="REGION" />
+                <ScalarProperty Name="clavebyte" ColumnName="clavebyte" />
+                <ScalarProperty Name="ERRORCORREO" ColumnName="ERRORCORREO" />
+                <ScalarProperty Name="ENVIACORREO" ColumnName="ENVIACORREO" />
+                <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+                <ScalarProperty Name="TIPOIDENTIFICACION" ColumnName="TIPOIDENTIFICACION" />
+                <ScalarProperty Name="estadoFecEmi" ColumnName="estadoFecEmi" />
+                <ScalarProperty Name="NombreDocumento" ColumnName="NombreDocumento" />
+                <ScalarProperty Name="CODCLIENTE" ColumnName="CODCLIENTE" />
+                <ScalarProperty Name="ACTUALIZADOSC" ColumnName="ACTUALIZADOSC" />
+                <ScalarProperty Name="SUBIDOALAWEB" ColumnName="SUBIDOALAWEB" />
+                <ScalarProperty Name="ESTADOPROCESO" ColumnName="ESTADOPROCESO" />
+                <ScalarProperty Name="HORAPROCESO" ColumnName="HORAPROCESO" />
+                <ScalarProperty Name="FECHAPROCESO" ColumnName="FECHAPROCESO" />
+                <ScalarProperty Name="HORAREGISTRO" ColumnName="HORAREGISTRO" />
+                <ScalarProperty Name="FECHAREGISTRO" ColumnName="FECHAREGISTRO" />
+                <ScalarProperty Name="ARCHIVOPDF" ColumnName="ARCHIVOPDF" />
+                <ScalarProperty Name="ARCHIVOAUTORIZACION" ColumnName="ARCHIVOAUTORIZACION" />
+                <ScalarProperty Name="CODIGOERROR" ColumnName="CODIGOERROR" />
+                <ScalarProperty Name="ARCHIVOERROR" ColumnName="ARCHIVOERROR" />
+                <ScalarProperty Name="CONCEPTOERROR" ColumnName="CONCEPTOERROR" />
+                <ScalarProperty Name="ARCHIVOFIRMA" ColumnName="ARCHIVOFIRMA" />
+                <ScalarProperty Name="ARCHIVOSOLO" ColumnName="ARCHIVOSOLO" />
+                <ScalarProperty Name="CLAVEACCESO" ColumnName="CLAVEACCESO" />
+                <ScalarProperty Name="FECHARET" ColumnName="FECHARET" />
+                <ScalarProperty Name="NOAUTORIZACION" ColumnName="NOAUTORIZACION" />
+                <ScalarProperty Name="NUMERORET" ColumnName="NUMERORET" />
+                <ScalarProperty Name="SERIERET" ColumnName="SERIERET" />
+                <ScalarProperty Name="CORREORET" ColumnName="CORREORET" />
+                <ScalarProperty Name="TELEFONRET" ColumnName="TELEFONRET" />
+                <ScalarProperty Name="DIRECCIONRET" ColumnName="DIRECCIONRET" />
+                <ScalarProperty Name="NOMBRERET" ColumnName="NOMBRERET" />
+                <ScalarProperty Name="RUCRET" ColumnName="RUCRET" />
+                <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+                <ScalarProperty Name="EMPRESA" ColumnName="EMPRESA" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

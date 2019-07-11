@@ -708,6 +708,7 @@
             this.btnTest.Size = new System.Drawing.Size(50, 47);
             this.btnTest.TabIndex = 67;
             this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
             // txtClaveOdbc
             // 
@@ -969,6 +970,7 @@
             this.btnSave.TabIndex = 28;
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnNuevo
             // 

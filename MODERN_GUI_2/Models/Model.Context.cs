@@ -40,5 +40,8 @@ namespace MODERN_GUI_2.Models
         public virtual DbSet<APSCRIPT> APSCRIPT { get; set; }
         public virtual DbSet<APSUCURSAL> APSUCURSAL { get; set; }
         public virtual DbSet<APTIPODOC> APTIPODOC { get; set; }
+        public virtual DbSet<APGUIACAB> APGUIACAB { get; set; }
+        public virtual DbSet<APNCRCAB> APNCRCAB { get; set; }
+        public virtual DbSet<APRETENCION> APRETENCION { get; set; }
     }
 }

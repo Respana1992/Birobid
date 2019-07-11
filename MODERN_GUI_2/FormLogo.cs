@@ -14,9 +14,11 @@ namespace MODERN_GUI_2
 {
     public partial class FormLogo : Form
     {
-        public FormLogo()
+        private int _codeEmpresa;
+        public FormLogo(int code)
         {
             InitializeComponent();
+            _codeEmpresa = code;
         }
 
         private void FormLogo_Load(object sender, EventArgs e)
@@ -30,7 +32,7 @@ namespace MODERN_GUI_2
             {
                 try
                 {
-                    chartFacturas.DataSource = db.APFACTURACAB.Where(x => x.ESTADOPROCESO == "P").ToList();
+                    chartFacturas.DataSource = db.APFACTURACAB.Where(x => x.ESTADOPROCESO == "P" && x.EMPRESA == _codeEmpresa).ToList();
                     chartFacturas.Series["Series1"].XValueMember = "NUMERO";
                     chartFacturas.Series["Series1"].YValueMembers = "RUC";
                     // Set the chart title
@@ -39,6 +41,36 @@ namespace MODERN_GUI_2
                     chartFacturas.Series["Series1"].ChartType = SeriesChartType.Pie;
                     // To show chart value           
                     chartFacturas.Series["Series1"].IsValueShownAsLabel = true;
+
+                    chartGuia.DataSource = db.APGUIACAB.Where(x => x.ESTADOPROCESO == "P" && x.EMPRESA == _codeEmpresa).ToList();
+                    chartGuia.Series["Series1"].XValueMember = "NUMERO";
+                    chartGuia.Series["Series1"].YValueMembers = "RUCCLI";
+                    // Set the chart title
+                    this.chartGuia.Titles.Add("GUIAS DE REMISION AUTORIZADAS");
+                    // Set chart type like Bar chart, Pie chart 
+                    chartGuia.Series["Series1"].ChartType = SeriesChartType.Pie;
+                    // To show chart value           
+                    chartGuia.Series["Series1"].IsValueShownAsLabel = true;
+
+                    chartRetencion.DataSource = db.APRETENCION.Where(x => x.ESTADOPROCESO == "P" && x.EMPRESA == _codeEmpresa).ToList();
+                    chartRetencion.Series["Series1"].XValueMember = "NUMERORET";
+                    chartRetencion.Series["Series1"].YValueMembers = "RUCRET";
+                    // Set the chart title
+                    this.chartRetencion.Titles.Add("RETENCIONES DE PROVEEDORES AUTORIZADAS");
+                    // Set chart type like Bar chart, Pie chart 
+                    chartRetencion.Series["Series1"].ChartType = SeriesChartType.Pyramid;
+                    // To show chart value           
+                    chartRetencion.Series["Series1"].IsValueShownAsLabel = true;
+
+                    chartNCR.DataSource = db.APNCRCAB.Where(x => x.ESTADOPROCESO == "P" && x.EMPRESA == _codeEmpresa).ToList();
+                    chartNCR.Series["Series1"].XValueMember = "NUMERO";
+                    chartNCR.Series["Series1"].YValueMembers = "RUC";
+                    // Set the chart title
+                    this.chartNCR.Titles.Add("NOTAS DE CREDITOS AUTORIZADAS");
+                    // Set chart type like Bar chart, Pie chart 
+                    chartNCR.Series["Series1"].ChartType = SeriesChartType.Pyramid;
+                    // To show chart value           
+                    chartNCR.Series["Series1"].IsValueShownAsLabel = true;
                 }
                 catch (Exception ex)
                 {

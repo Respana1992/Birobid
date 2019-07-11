@@ -118,7 +118,7 @@ namespace MODERN_GUI_2
             mostrarlogo();
         }
         private void mostrarlogo() {
-            AbrirFormInPanel(new FormLogo());
+            AbrirFormInPanel(new FormLogo(_codeEmpresa));
         }
 
         private void btnEMPLEADOS_Click(object sender, EventArgs e)

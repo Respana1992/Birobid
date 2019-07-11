@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,11 +16,13 @@ namespace MODERN_GUI_2.Views
     public partial class FormEmpresa : Form
     {
         private int _codeEmpresa;
+        private string ConexionExterna;
 
         public FormEmpresa(int code)
         {
             InitializeComponent();
             _codeEmpresa = code;
+            ConexionExterna = "";
         }
 
         private void FormEmpresa_Load(object sender, EventArgs e)
@@ -33,7 +36,7 @@ namespace MODERN_GUI_2.Views
             {
                 try
                 {
-                    var objempresa = db.APEMPRESA.Where(x =>x.EMPRESA == _codeEmpresa).FirstOrDefault();
+                    var objempresa = db.APEMPRESA.Where(x => x.EMPRESA == _codeEmpresa).FirstOrDefault();
                     this.txtEmpresa.Text = objempresa.NOMBRE;
                     this.txtDireccion.Text = objempresa.DIRECCION;
                     this.txtRuc.Text = objempresa.RUC;
@@ -68,6 +71,7 @@ namespace MODERN_GUI_2.Views
                     this.chkNdb.Checked = Convert.ToBoolean(objempresa.NDB);
                     this.chkGuia.Checked = Convert.ToBoolean(objempresa.GUIA);
                     this.chkRetencion.Checked = Convert.ToBoolean(objempresa.RETENCION);
+
                     var objcertificado = db.APCERTIFICADO.FirstOrDefault();
                     this.txtRutaArchivo.Text = objcertificado.RUTA;
                     this.txtClaveArchivo.Text = objcertificado.CLAVE;
@@ -108,7 +112,7 @@ namespace MODERN_GUI_2.Views
                 this.txtRutaArchivo.Text = OpenFileDialog1.FileName;
             }
         }
-        
+
         private void SaveEmpresa()
         {
             using (BDAPOLOFEEntities db = new BDAPOLOFEEntities())
@@ -127,6 +131,35 @@ namespace MODERN_GUI_2.Views
                         model.ESPECIAL = this.chkContribuyente.Checked;
                         model.LOGOEMPRESA = this.txtRutaLogo.Text.Trim();
                         model.GERENTE = this.txtGerente.Text.Trim();
+                        model.TELEFONOG = this.txtTelefono.Text.Trim();
+                        model.RUCG = this.txtCedula.Text.Trim();
+                        model.OBSERVACION = this.txtObservacion.Text;
+                        model.DIRECCIONFTP = this.txtUrl.Text.Trim();
+                        model.USUARIOFTP = this.txtUsuarioFtp.Text.Trim();
+                        model.CLAVEFTP = this.txtClaveFtp.Text.Trim();
+                        if (this.chkFTP.Checked)
+                        {
+                            model.ENVIAWEB = "S";
+                        }
+                        else
+                        {
+                            model.ENVIAWEB = "N";
+                        }
+                        model.CLAVEREGISTRADA = this.chkClaveRegistrada.Checked;
+                        model.EDITASCRIP = this.chkEditarScript.Checked;
+                        model.USUARIOE = this.txtUsuarioOdbc.Text.Trim();
+                        model.CLAVEE = this.txtClaveOdbc.Text.Trim();
+                        model.ODBCE = this.txtOdbc.Text.Trim();
+
+                        APCERTIFICADO certificado = db.APCERTIFICADO.Where(x => x.EMPRESA == _codeEmpresa).FirstOrDefault();
+                        certificado.RUTA = this.txtRutaArchivo.Text;
+                        certificado.CLAVE = this.txtClaveArchivo.Text.Trim();
+                        certificado.FECHAEMISION = this.dtpFechaEmision.Value;
+                        certificado.FECHACADUCIDAD = this.dtpFechaCaducidad.Value;
+
+                        db.APCERTIFICADO.Attach(certificado);
+                        db.Entry(certificado).State = EntityState.Modified;
+
                         db.APEMPRESA.Attach(model);
                         db.Entry(model).State = EntityState.Modified;
                         db.SaveChanges();
@@ -141,5 +174,33 @@ namespace MODERN_GUI_2.Views
             }
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            SaveEmpresa();
+        }
+
+        private void TestConexion()
+        {
+            string ruta = Path.Combine(Application.StartupPath, "\\ARCHIVO.txt");
+            StreamReader sr = File.OpenText(ruta);
+            while (sr.Peek() != -1)
+            {
+                string server = sr.ReadLine();
+                string user = sr.ReadLine();
+                string password = sr.ReadLine();
+                
+                if (server == this.txtOdbc.Text.Trim() && user == this.txtUsuarioOdbc.Text.Trim() && password == this.txtClaveOdbc.Text.Trim())
+                {
+                    ConexionExterna = sr.ReadLine();
+                    MessageBox.Show("Conexion establecida con exito", "Sistema Apolo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                }
+            }
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            TestConexion();
+        }
     }
 }

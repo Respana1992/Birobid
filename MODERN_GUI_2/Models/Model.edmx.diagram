@@ -27,6 +27,13 @@
         <AssociationConnector Association="BDAPOLOFEModel.FK__APOPERADO__EMPRE__160F4887" ManuallyRouted="false" />
         <AssociationConnector Association="BDAPOLOFEModel.FK__APRUTAARC__EMPRE__4C6B5938" ManuallyRouted="false" />
         <AssociationConnector Association="BDAPOLOFEModel.FK__APSUCURSA__EMPRE__1BC821DD" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BDAPOLOFEModel.APGUIACAB" Width="1.5" PointX="3" PointY="37.625" />
+        <EntityTypeShape EntityType="BDAPOLOFEModel.APNCRCAB" Width="1.5" PointX="3" PointY="49.75" />
+        <EntityTypeShape EntityType="BDAPOLOFEModel.APRETENCION" Width="1.5" PointX="3" PointY="28.125" />
+        <AssociationConnector Association="BDAPOLOFEModel.FK__APFACTURA__EMPRE__3BFFE745" />
+        <AssociationConnector Association="BDAPOLOFEModel.FK__APGUIACAB__EMPRE__73501C2F" />
+        <AssociationConnector Association="BDAPOLOFEModel.FK__APNCRCAB__EMPRES__3DE82FB7" />
+        <AssociationConnector Association="BDAPOLOFEModel.FK__APRETENCI__EMPRE__3FD07829" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -12,26 +12,28 @@ namespace MODERN_GUI_2.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class APFACTURACAB
+    public partial class APGUIACAB
     {
         public decimal ID { get; set; }
         public int EMPRESA { get; set; }
         public int SUCURSAL { get; set; }
         public string SERIE { get; set; }
         public long NUMERO { get; set; }
-        public double SUBTOTALFAC { get; set; }
-        public double DESCUENTOFAC { get; set; }
-        public double IVAFAC { get; set; }
-        public double NETOFAC { get; set; }
+        public long NUMGUIA { get; set; }
         public System.DateTime FECHAEMI { get; set; }
-        public System.DateTime FECHAVEN { get; set; }
-        public string RUC { get; set; }
-        public string NOMBRE { get; set; }
+        public string RUCCHOFER { get; set; }
+        public string ANIOCAMION { get; set; }
+        public string NUMAUTORIZACIONDOC { get; set; }
+        public string CAMION { get; set; }
+        public string MOTIVO { get; set; }
+        public string PLACA { get; set; }
+        public string NOMBRECHOFER { get; set; }
+        public string NOMBRECLIENTE { get; set; }
+        public string RUCCLI { get; set; }
         public string DIRECCION { get; set; }
         public string TELEFONOS { get; set; }
         public string CORREO { get; set; }
         public string CLAVEACCESO { get; set; }
-        public string OBSERVACION { get; set; }
         public string NOAUTORIZACION { get; set; }
         public string ARCHIVOSOLO { get; set; }
         public string ARCHIVOFIRMA { get; set; }
@@ -54,52 +56,17 @@ namespace MODERN_GUI_2.Models
         public string NOMCIUDAD { get; set; }
         public string DETALLE { get; set; }
         public string BENEFICIARIO { get; set; }
+        public string VALORENLETRAS { get; set; }
         public string CODCLIENTE { get; set; }
         public string NombreDocumento { get; set; }
-        public string FORMAPAGO { get; set; }
-        public string TIPOCLIENTE { get; set; }
-        public string VENDEDOR { get; set; }
-        public string NOGUIA { get; set; }
-        public string PROVINCIA { get; set; }
-        public string CANTON { get; set; }
-        public string PARROQUIA { get; set; }
-        public string SECTOR { get; set; }
-        public string CLAVE { get; set; }
-        public string USUARIO { get; set; }
-        public string PAGINAWEB { get; set; }
-        public int estadoFecEmi { get; set; }
-        public string REFERENCIA { get; set; }
-        public Nullable<System.DateTime> FECHA_EMBARQUE { get; set; }
-        public string BUQUE { get; set; }
-        public string NAVIERA { get; set; }
-        public string ALMACENARA { get; set; }
-        public string PRODUCTO { get; set; }
+        public Nullable<int> estadoFecEmi { get; set; }
         public string TIPOIDENTIFICACION { get; set; }
-        public string PROVEEDOR { get; set; }
-        public string PUERTOEMB { get; set; }
-        public string TRANSPORTE { get; set; }
-        public string VIATRANSP { get; set; }
-        public string MERCADERIA { get; set; }
-        public string NOTIFICACION { get; set; }
-        public string NDAI { get; set; }
-        public string MANIFIESTO { get; set; }
-        public string BL { get; set; }
-        public Nullable<double> PESO { get; set; }
-        public string REFRENDO { get; set; }
-        public string PEDIDO { get; set; }
-        public string DESTINO { get; set; }
-        public Nullable<System.DateTime> FECLLEGADA { get; set; }
-        public string NAVE { get; set; }
-        public string NUMPEDIDO { get; set; }
-        public string PLAZO { get; set; }
+        public string DESPACHO { get; set; }
         public string ENVIACORREO { get; set; }
         public string ERRORCORREO { get; set; }
         public byte[] clavebyte { get; set; }
         public string REGION { get; set; }
-        public double SUBTOTALCERO { get; set; }
         public string ANULADO { get; set; }
-        public string SUBIRWEB { get; set; }
-        public string MANEJACLAVE { get; set; }
     
         public virtual APEMPRESA APEMPRESA { get; set; }
     }
