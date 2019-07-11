@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,9 +14,12 @@ namespace MODERN_GUI_2.Views
 {
     public partial class FormEmpresa : Form
     {
-        public FormEmpresa()
+        private int _codeEmpresa;
+
+        public FormEmpresa(int code)
         {
             InitializeComponent();
+            _codeEmpresa = code;
         }
 
         private void FormEmpresa_Load(object sender, EventArgs e)
@@ -29,7 +33,7 @@ namespace MODERN_GUI_2.Views
             {
                 try
                 {
-                    var objempresa = db.APEMPRESA.FirstOrDefault();
+                    var objempresa = db.APEMPRESA.Where(x =>x.EMPRESA == _codeEmpresa).FirstOrDefault();
                     this.txtEmpresa.Text = objempresa.NOMBRE;
                     this.txtDireccion.Text = objempresa.DIRECCION;
                     this.txtRuc.Text = objempresa.RUC;
@@ -57,11 +61,19 @@ namespace MODERN_GUI_2.Views
                     this.txtOdbc.Text = objempresa.ODBCE;
                     this.txtUsuarioOdbc.Text = objempresa.USUARIOE;
                     this.txtClaveOdbc.Text = objempresa.CLAVEE;
+                    this.chkClaveRegistrada.Checked = Convert.ToBoolean(objempresa.CLAVEREGISTRADA);
+                    this.chkEditarScript.Checked = Convert.ToBoolean(objempresa.EDITASCRIP);
+                    this.chkFactura.Checked = Convert.ToBoolean(objempresa.FACTURA);
+                    this.chkNcr.Checked = Convert.ToBoolean(objempresa.NCR);
+                    this.chkNdb.Checked = Convert.ToBoolean(objempresa.NDB);
+                    this.chkGuia.Checked = Convert.ToBoolean(objempresa.GUIA);
+                    this.chkRetencion.Checked = Convert.ToBoolean(objempresa.RETENCION);
                     var objcertificado = db.APCERTIFICADO.FirstOrDefault();
                     this.txtRutaArchivo.Text = objcertificado.RUTA;
                     this.txtClaveArchivo.Text = objcertificado.CLAVE;
                     this.dtpFechaEmision.Value = objcertificado.FECHAEMISION;
                     this.dtpFechaCaducidad.Value = objcertificado.FECHACADUCIDAD;
+                    this.rbtArchivo.Checked = true;
                 }
                 catch (Exception ex)
                 {
@@ -96,5 +108,38 @@ namespace MODERN_GUI_2.Views
                 this.txtRutaArchivo.Text = OpenFileDialog1.FileName;
             }
         }
+        
+        private void SaveEmpresa()
+        {
+            using (BDAPOLOFEEntities db = new BDAPOLOFEEntities())
+            {
+                using (DbContextTransaction trans = db.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        APEMPRESA model = db.APEMPRESA.Where(x => x.EMPRESA == _codeEmpresa).FirstOrDefault();
+                        model.NOMBRE = this.txtEmpresa.Text.Trim();
+                        model.DIRECCION = this.txtDireccion.Text.Trim();
+                        model.RUC = this.txtRuc.Text.Trim();
+                        model.TELEFONO = this.txtTelefonos.Text.Trim();
+                        model.CORREOEMP = this.txtCorreo.Text.Trim();
+                        model.CODIGOCONTRIBUYENTE = this.txtResolucion.Text.Trim();
+                        model.ESPECIAL = this.chkContribuyente.Checked;
+                        model.LOGOEMPRESA = this.txtRutaLogo.Text.Trim();
+                        model.GERENTE = this.txtGerente.Text.Trim();
+                        db.APEMPRESA.Attach(model);
+                        db.Entry(model).State = EntityState.Modified;
+                        db.SaveChanges();
+                        trans.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        trans.Rollback();
+                        MessageBox.Show(ex.Message, "Sistema Apolo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
     }
 }

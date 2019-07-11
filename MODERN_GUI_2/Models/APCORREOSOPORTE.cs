@@ -12,12 +12,12 @@ namespace MODERN_GUI_2.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class APMODELORIDE
+    public partial class APCORREOSOPORTE
     {
-        public string Codigo { get; set; }
-        public string Descripcion { get; set; }
-        public bool Estado { get; set; }
-        public string Tipo { get; set; }
-        public int Empresa { get; set; }
+        public int ID { get; set; }
+        public int EMPRESA { get; set; }
+        public string CORREO { get; set; }
+    
+        public virtual APEMPRESA APEMPRESA { get; set; }
     }
 }

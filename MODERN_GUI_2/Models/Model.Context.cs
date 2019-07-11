@@ -25,14 +25,15 @@ namespace MODERN_GUI_2.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<APACCESO> APACCESO { get; set; }
         public virtual DbSet<APCERTIFICADO> APCERTIFICADO { get; set; }
         public virtual DbSet<APCODIGOERROR> APCODIGOERROR { get; set; }
         public virtual DbSet<APCORREO> APCORREO { get; set; }
+        public virtual DbSet<APCORREOSOPORTE> APCORREOSOPORTE { get; set; }
         public virtual DbSet<APEMPRESA> APEMPRESA { get; set; }
         public virtual DbSet<APESTADO> APESTADO { get; set; }
         public virtual DbSet<APFACTURACAB> APFACTURACAB { get; set; }
         public virtual DbSet<APFORMAPAGO> APFORMAPAGO { get; set; }
-        public virtual DbSet<APMODELORIDE> APMODELORIDE { get; set; }
         public virtual DbSet<APOPERADOR> APOPERADOR { get; set; }
         public virtual DbSet<APREGION> APREGION { get; set; }
         public virtual DbSet<APRUTAARCHIVO> APRUTAARCHIVO { get; set; }

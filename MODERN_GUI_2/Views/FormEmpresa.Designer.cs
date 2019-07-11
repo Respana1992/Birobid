@@ -103,6 +103,8 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -542,6 +544,8 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Lavender;
+            this.tabPage2.Controls.Add(this.label26);
+            this.tabPage2.Controls.Add(this.comboBox1);
             this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Controls.Add(this.chkRetencion);
             this.tabPage2.Controls.Add(this.chkGuia);
@@ -690,7 +694,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(161, 70);
+            this.label24.Location = new System.Drawing.Point(161, 76);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(116, 16);
             this.label24.TabIndex = 68;
@@ -732,7 +736,7 @@
             this.txtUsuarioOdbc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuarioOdbc.Location = new System.Drawing.Point(65, 50);
             this.txtUsuarioOdbc.Name = "txtUsuarioOdbc";
-            this.txtUsuarioOdbc.Size = new System.Drawing.Size(88, 23);
+            this.txtUsuarioOdbc.Size = new System.Drawing.Size(119, 23);
             this.txtUsuarioOdbc.TabIndex = 64;
             // 
             // label22
@@ -752,7 +756,7 @@
             this.txtOdbc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOdbc.Location = new System.Drawing.Point(65, 21);
             this.txtOdbc.Name = "txtOdbc";
-            this.txtOdbc.Size = new System.Drawing.Size(88, 23);
+            this.txtOdbc.Size = new System.Drawing.Size(119, 23);
             this.txtOdbc.TabIndex = 62;
             // 
             // label21
@@ -914,7 +918,7 @@
             this.btnOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.btnOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOut.ForeColor = System.Drawing.Color.Silver;
+            this.btnOut.ForeColor = System.Drawing.Color.Lavender;
             this.btnOut.Image = global::MODERN_GUI_2.Properties.Resources.logout;
             this.btnOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOut.Location = new System.Drawing.Point(766, 1);
@@ -930,6 +934,7 @@
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.BackColor = System.Drawing.Color.Lavender;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnDelete.Enabled = false;
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
@@ -970,6 +975,7 @@
             this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNuevo.BackColor = System.Drawing.Color.Lavender;
             this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnNuevo.Enabled = false;
             this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
@@ -984,6 +990,30 @@
             this.btnNuevo.TabIndex = 27;
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevo.UseVisualStyleBackColor = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Black;
+            this.label26.Location = new System.Drawing.Point(294, 226);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(101, 16);
+            this.label26.TabIndex = 79;
+            this.label26.Text = "Base de Datos:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "REGISTRO DE LA PROPIEDAD Y MERCANTIL DEL CANTON LA TRONCAL"});
+            this.comboBox1.Location = new System.Drawing.Point(397, 225);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(154, 21);
+            this.comboBox1.TabIndex = 78;
             // 
             // FormEmpresa
             // 
@@ -1097,5 +1127,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnOut;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

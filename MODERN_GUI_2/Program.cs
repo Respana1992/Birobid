@@ -17,7 +17,7 @@ namespace MODERN_GUI_2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormEmpresa());
+            Application.Run(new FormLogin());
         }
     }
 }

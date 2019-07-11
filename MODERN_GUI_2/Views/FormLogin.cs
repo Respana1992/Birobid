@@ -63,7 +63,7 @@ namespace MODERN_GUI_2.Views
 
                     if (resultado == 1)
                     {
-                        FormMenu f = new FormMenu();
+                        FormMenu f = new FormMenu(Convert.ToInt32(this.cmb_empresa.SelectedValue), this.cmb_empresa.SelectedText);
                         f.WindowState = FormWindowState.Maximized;
                         f.Show();
                         this.Hide();

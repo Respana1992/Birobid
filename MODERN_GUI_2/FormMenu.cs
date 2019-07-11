@@ -14,9 +14,14 @@ namespace MODERN_GUI_2
 {
     public partial class FormMenu : Form
     {
-        public FormMenu()
+        private int _codeEmpresa;
+        private string _nameEmpresa;
+
+        public FormMenu(int code, string name)
         {
             InitializeComponent();
+            _codeEmpresa = code;
+            _nameEmpresa = name;
         }
         private void iconCerrar_Click(object sender, EventArgs e)
         {
@@ -118,7 +123,7 @@ namespace MODERN_GUI_2
 
         private void btnEMPLEADOS_Click(object sender, EventArgs e)
         {
-            FormEmpresa f = new FormEmpresa();
+            FormEmpresa f = new FormEmpresa(_codeEmpresa);
             f.Show();
         }
 
